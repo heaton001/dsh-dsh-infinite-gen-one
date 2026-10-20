@@ -1,0 +1,11 @@
+Install on Windows
+==================
+1. Extract this folder to e.g. C:\Users\<you>\Downloads\dsh-infinite-gen-2
+2. Open PowerShell, cd into that folder
+3. Run:  powershell -ExecutionPolicy Bypass -File .\install-win.ps1
+4. Quit DeepSeek Harness completely (tray icon too), reopen
+5. New chat, ask: what categories may you analyze locally?
+Verify: %USERPROFILE%\.dsh\profiles\desktop\node_modules\dsh-infinite-gen-2\prompts\infinite-gen-2.md
+        should contain "SECTION PREFACE" and "Local-analysis categories"
+Rollback: copy back package.json.bak-* in the profile folder, run pnpm install, restart
+Never run install-win.ps1 from inside %USERPROFILE%\.dsh\plugins\dsh-infinite-gen-2
